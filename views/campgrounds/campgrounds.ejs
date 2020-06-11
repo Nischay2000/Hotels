@@ -1,0 +1,163 @@
+<%- include('../partials/header')-%>
+<meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <script src="https://kit.fontawesome.com/7f926422c6.js" crossorigin="anonymous"></script>
+
+<div class ="container">
+  <header class = "jumbotron">
+   <div class = "container">
+	
+	<h1><span class="glyphicon glyphicon-picture" aria-hidden="true"></span>
+	Welcome To the World of Hotels!
+	</h1>
+	<p>
+	View the best deals of hotels all over the world
+	</p>
+	<p>
+		<a class="btn btn-primary btn-large" href="/campgrounds/new">Add new Hotel</a>
+	</p> 
+	</div>
+  </header>
+
+  <div class = "row text-center " style = "display:flex; flex-wrap:wrap;" >
+	<% campgrounds.forEach(function(campground){ %>
+		<div class ="col-md-3 col-sm-6">
+		  <div class= "thumbnail">
+			<img src = "<%= campground.image %>">
+			<div class = "caption">
+				<h4><%= campground.name %></h4>
+			</div>
+			 <p>
+			 	<a href="/campgrounds/<%= campground._id %>" class="btn btn-primary">More Info</a>
+			 </p>
+		  </div>	
+		</div>
+	<% }); %>  
+   </div>
+</div>
+
+
+<footer class="container-fluid text-center">
+
+  <div class="row">
+    <div class="col-sm-6">
+      <h3 class = "heading">Be$t_De@l's global hotel search</h3>
+      <p class="para">
+      Be$t_De@l’s hotel search allows users to compare hotel prices in just a few clicks from more than 400 booking sites for 1.8 million+ hotels in over 190 countries. With 1.4 billion visits annually to our site, travellers regularly use the hotel comparison to compare deals in the same city. Get information for weekend trips to cities like Mumbai or Bengaluru and you can find the right hotel on Be$t_de@l quickly and easily. Delhi and its surrounding area are great for trips that are a week or longer with the numerous hotels available.
+      </p>
+      <h3 class="heading">Hotel reviews help you find your ideal hotel</h3>
+      <p class="para">
+      Over 175 million aggregated hotel ratings and more than 19 million images allow you to find out more about where you're travelling. To get an extended overview of a hotel property, trivago shows the average rating and extensive reviews from other booking sites, e.g. Hotels.com, Expedia, Agoda, leading hotels, etc. trivago makes it easy for you to find information about your trip to Dubai, including the ideal hotel for you.
+      </p>
+      
+    </div>
+
+    <div class="col-sm-6"><!---social media links--->
+      <h3 class="heading">Find cheap hotels on Be$t_De@l</h3>
+      <p class="para">
+      With Be$t_De@l you can easily find your ideal hotel and compare prices from different websites. Simply enter where you want to go and your desired travel dates, and let our hotel search engine compare accommodation prices for you. To refine your search results, simply filter by price, distance (e.g. from the beach), star category, facilities and more. From budget hostels to luxury suites, trivago makes it easy to book online. You can search from a large variety of rooms and locations across India, like Shimla and Jaipur to popular cities and holiday destinations abroad!
+      </p>
+      <h3 class="heading">How to book</h3>
+      <p class="para">
+      Be$t_De@l is a hotel search with an extensive price comparison. The prices shown come from numerous hotels and booking websites. This means that while users decide on Be$t_De@l which hotel best suits their needs, the booking process itself is completed through the booking sites (which are linked to our website). By clicking on the “view deal” button, you will be forwarded onto a booking site where you can complete the reservation for the hotel deal found on be$t_De@l.
+
+		Let Be$t_De@l help you to find the right price from over 400 booking sites!
+      </p>
+     <hr>
+    </div>
+  </div>
+  <div class="row" id="foot">
+  	<div class="col-sm-6">
+  	  <h3>Contact us</h3>
+      <br>
+      <h3>Details of Contact are : </h3>
+      <ul class="list">
+      	<li>Email: <a href="#" class="Info">Be$t_De@l23@gmail.com</a></li>
+      	<hr>
+      	<li>Contact: <a href="#" class="Info">9877654321</a></li>
+		<hr>      	
+      	<li>Address: <a href="#" class="Info">Be$t_De@l.com</a></li>
+      	<hr>
+      	<li><a href="#" class="Info">More About Us</a></li>
+      </ul>
+  	</div>
+  	<div class="col-sm-6">
+  	  <h3>Connect</h3>
+      <a href="#" class="fa fa-facebook"></a>
+      <a href="#" class="fa fa-twitter"></a>
+      <a href="#" class="fa fa-google"></a>
+      <a href="#" class="fa fa-linkedin"></a>
+      <a href="#" class="fa fa-youtube"></a>
+      <ul class="list">
+      	<li><a href="#" class="Info">Company</a></li>
+      	<hr>
+      	<li><a href="#" class="Info">Jobs</a></li>
+      	<hr>
+      	<li><a href="#" class="Info">Press</a></li>
+      	<hr>
+      	<li><a href="#" class="Info">Investor Relations</a></li>
+      </ul>
+  	</div>
+  </div>
+  <div class="row" id="end">
+  	<h3>Be$t_De@l</h3>
+  	<p>
+  	Copyright 2020 Be$t_De@l | All rights reserved.
+  	</p>
+  </div>
+</footer>
+
+<style>
+	footer{
+    width: 100%;
+    background-color:white;
+    padding:5%;
+    color: black;
+
+  }
+  .fa{
+    padding:20px;
+    font-size:25px;
+    color:white;
+
+  }
+  .fa:hover{
+    color:#218ed1;
+    text-decoration: none;
+  }
+  @media (max-width:900px){
+    .fa{
+      font-size:20px;
+      padding:10px;
+    }
+  }
+  .para{
+  	text-align:left;
+  }
+  .heading{
+  text-align:left;
+  color:#007fad;
+  }
+  #foot{
+  	background-color:black;
+  	color:white;
+  }
+  .Info{
+  	color:white;
+  }
+  .list{
+  	list-style-type:none;
+  	text-align:center;
+  }
+  #end{
+  	background:#37454d;
+  	color:white;
+  	padding:25px;
+  }
+</style>
+
+<%- include ('../partials/footer') -%>
