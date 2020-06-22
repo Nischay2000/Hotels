@@ -8,6 +8,57 @@
 		<div class="form-group">
 			<input class="form-control" type = "text" name= "comment[text]" value="<%=comment.text %>">
 		</div>
+		<div class="form-check">
+			<h4>Rating</h4>
+			<div>
+				<label class="form-check-label">
+					<input type="radio" class="form-check-input" name="comment[rating]" value=1>
+					<span class="glyphicon glyphicon-star" style="color: #ffd270; font-size: 1.3em"></span>
+					<% for(var i=0; i < 4; i++) { %>
+						<span class="glyphicon glyphicon-star-empty" style="color: #ffd270; font-size: 1.3em"></span>
+					<% } %>
+				</label>
+			</div>
+			<div>
+				<label class="form-check-label">
+					<input type="radio" class="form-check-input" name="comment[rating]" value=2>
+					<% for(var i=0; i < 2; i++) { %>
+						<span class="glyphicon glyphicon-star" style="color: #ffd270; font-size: 1.3em"></span>
+					<% } %>
+					<% for(var i=0; i < 3; i++) { %>
+						<span class="glyphicon glyphicon-star-empty" style="color: #ffd270; font-size: 1.3em"></span>
+					<% } %>
+				</label>
+			</div>
+			<div>
+				<label class="form-check-label">
+					<input type="radio" class="form-check-input" name="comment[rating]" value=3>
+					<% for(var i=0; i < 3; i++) { %>
+						<span class="glyphicon glyphicon-star" style="color: #ffd270; font-size: 1.3em"></span>
+					<% } %>
+					<% for(var i=0; i < 2; i++) { %>
+						<span class="glyphicon glyphicon-star-empty" style="color: #ffd270; font-size: 1.3em"></span>
+					<% } %>
+				</label>
+			</div>
+			<div>
+				<label class="form-check-label">
+					<input type="radio" class="form-check-input" name="comment[rating]" value=4>
+					<% for(var i=0; i < 4; i++) { %>
+						<span class="glyphicon glyphicon-star" style="color: #ffd270; font-size: 1.3em"></span>
+					<% } %>
+					<span class="glyphicon glyphicon-star-empty" style="color: #ffd270; font-size: 1.3em"></span>
+				</label>
+			</div>
+			<div>
+				<label class="form-check-label">
+					<input type="radio" class="form-check-input" name="comment[rating]" value=5>
+					<% for(var i=0; i < 5; i++) { %>
+						<span class="glyphicon glyphicon-star" style="color: #ffd270; font-size: 1.3em"></span>
+					<% } %>
+				</label>
+			</div>
+		</div>
 		<div class="form-group">	
 			<button class="btn btn-lg btn-primary btn-block">Submit</button>
 		</div> 
