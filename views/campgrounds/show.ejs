@@ -4,16 +4,26 @@
 		<div class="col-md-3">
 			<p class="lead">Be$t_De@l</p>
 			<div class="list-group">
-				<li class="list-group-item active">Info 1</li>
-				<li class="list-group-item">Info 2</li>
-				<li class="list-group-item">Info 3</li>
+				<li class="list-group-item active">Normal Room</li>
+				<li class="list-group-item">Deluxe Room</li>
+				<li class="list-group-item">Super Deluxe Room</li>
 			</div>		
 		</div>
 		<div class="col-md-9">
 			<div class="thumbnail">
-				<img class="img-responsive" src="<%= campground.image %>">
+				<div class="image show">
+					<img class="img-responsive  " src="<%= campground.rooms.normalRoom.picture %>">
+				</div>
+				<div class="image">
+					<img class="img-responsive  " src="<%= campground.rooms.deluxeRoom.picture %>">
+				</div>
+				<div class="image">
+					<img class="img-responsive  " src="<%= campground.rooms.superDeluxRoom.picture %>">
+				</div>
 				<div class="caption-full">
-					<h4 class="pull-right">$<%= campground.price%>/night</h4>
+					<h4 class="pull-right price show">$<%= campground.rooms.normalRoom.price%>/night</h4>
+					<h4 class="pull-right price">$<%= campground.rooms.deluxeRoom.price%>/night</h4>
+					<h4 class="pull-right price">$<%= campground.rooms.superDeluxRoom.price%>/night</h4>
 					<h4><a><%=campground.name %></a></h4>
 					<p><%= campground.description %></p>
 					<p>
@@ -171,6 +181,15 @@
   .Info{
   	color:white;
   }
+
+  .price {
+	  display: none;
+  }
+
+.image {
+	display: none;
+}
+
   .list{
   	list-style-type:none;
   	text-align:center;
