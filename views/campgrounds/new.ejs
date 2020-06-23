@@ -1,57 +1,122 @@
 <%- include('../partials/header')-%>
 
-<div class = "container">
-	<div class="row">
-		<h1 style="text-align:center;" id="register-head">Add a new Hotel</h1>
-		<div style="width:30%; margin: 25px auto">
-			<form action="/campgrounds" method = "POST" id="register-form">
-			<!-- Old -->
-			<div class="form-group">
-				<label for="name">Hotel Name</label>
-				<input class="form-control" type = "text" name= "name" placeholder = "Hotel Name">
-			</div>
+<div class="container">
+  <div class="row">
+    <h1 style="text-align: center;" id="register-head">Add a new Hotel</h1>
+    <div style="width: 30%; margin: 25px auto;">
+      <form action="/campgrounds" method="POST" id="register-form">
+        <!-- Old -->
+        <div class="form-group">
+          <label for="name">Hotel Name</label>
+          <input
+            class="form-control"
+            type="text"
+            name="name"
+            placeholder="Hotel Name"
+          />
+        </div>
 
-			<!-- New -->
-			<div class="form-group">
-				<label for="city">City</label>
-				<input class="form-control" type="text" name="city" placeholder="City">
-			</div>
-			<div class="form-group">
-				<label for="room">Room</label>
-				<select class="form-control">
-					<option class="form-control" name="room" value="Normal Room">Normal Room</option>
-					<option class="form-control" name="room" value="Deluxe Suite">Deluxe Suite</option>
-					<option class="form-control" name="room" value="Super Deluxe Suite">Super Deluxe Suite</option>
-					<option class="form-control" name="room" value="Family Suite">Family Suite</option>
-				</select>
-			</div>
-			
-			<!-- Old -->
-			<div class="form-group">
-				<label for="price">Room Price</label>
-				<input class="form-control" type = "number" name= "price" placeholder = "price" min="500" step="500">
-			</div>
-			<div class="form-group">
-				<label for="image">Room Image url</label>
-				<input class="form-control" type = "text" name = "image" placeholder = "Image url">
-			</div>
-			<div class="form-group">
-				<label for="description">Room Description</label>
-				<input class="form-control" type = "text" name = "description" placeholder = "Room Description">
-			</div>
-			<div class="form-group">	
-				<button class="btn btn-lg btn-primary btn-block">Submit</button>
-			</div> 
-			<a href="/campgrounds">Go Back</a>
-			</form>
-		</div>
-	</div>
-	<ul class="slideshow">
-		<li></li>
-		<li></li>
-		<li></li>
-		<li></li>
-		<li></li>
-	</ul>
+        <!-- New -->
+        <div class="form-group">
+          <label for="city">City</label>
+          <input
+            class="form-control"
+            type="text"
+            name="city"
+            placeholder="City"
+          />
+        </div>
+        <div class="form-group">
+          <label for="normalRoomPicture">Normal Room Picture</label>
+          <input
+            type="text"
+            class="form-control"
+            name="normalRoomPicture"
+            placeholder="Image Url"
+          />
+        </div>
+        <div class="form-group">
+          <label for="normalRoomPrice">Normal Room Price</label>
+          <input
+            class="form-control"
+            type="number"
+            name="normalRoomPrice"
+            placeholder="price"
+            min="500"
+            step="500"
+          />
+        </div>
+        <div class="form-group">
+          <label for="deluxRoomPicture">Delux Room Picture</label>
+          <input
+            type="text"
+            class="form-control"
+            name="deluxRoomPicture"
+            placeholder="Image Url"
+          />
+        </div>
+        <div class="form-group">
+          <label for="deluxRoomPrice">Delux Room Price</label>
+          <input
+            class="form-control"
+            type="number"
+            name="deluxRoomPrice"
+            placeholder="price"
+            min="500"
+            step="500"
+          />
+        </div>
+        <div class="form-group">
+          <label for="superDeluxRoomPicture">Super Delux Room Picture</label>
+          <input
+            type="text"
+            class="form-control"
+            name="superDeluxRoomPicture"
+            placeholder="Image Url"
+          />
+        </div>
+        <div class="form-group">
+          <label for="superDeluxRoomPrice">Super Delux Room Price</label>
+          <input
+            class="form-control"
+            type="number"
+            name="superDeluxRoomPrice"
+            placeholder="price"
+            min="500"
+            step="500"
+          />
+        </div>
+        <div class="form-group">
+          <label for="description">Hotel Description</label>
+          <input
+            class="form-control"
+            type="text"
+            name="description"
+            placeholder="Hotel Description"
+          />
+        </div>
+        <div class="form-group">
+          <label for="description">Hotel Picture</label>
+          <input
+            type="text"
+            class="form-control"
+            name="hotelPicture"
+            placeholder="Image Url"
+          />
+        </div>
+        <div class="form-group">
+          <button class="btn btn-lg btn-primary btn-block">Submit</button>
+        </div>
+        <a href="/campgrounds">Go Back</a>
+      </form>
+    </div>
+  </div>
+  <ul class="slideshow">
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+  </ul>
 </div>
 <%- include ('../partials/footer') -%>
