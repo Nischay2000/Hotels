@@ -1,0 +1,79 @@
+#register-form {
+	opacity: 1 !important;
+	z-index: 1;
+	position: relative;
+}
+#register-head {
+	position: relative;
+	opacity: 1 !important;
+	z-index: 1;
+	color: #fff;
+	font-size: 4em;
+	text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.8);
+}
+label {
+	color: #fff;
+}
+.slideshow {
+	position: fixed;
+	width: 100%;
+	height: 100%;
+	top: 0;
+	left: 0;
+	z-index: 0;
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+.slideshow li {
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	top: 0;
+	left: 0;
+	background-size: cover;
+	background-position: 50% 50%;
+	background-repeat: no-repeat;
+	opacity: 0;
+	z-index: 0;
+	animation: imageAnimation 50s linear infinite;
+}
+.slideshow li:nth-child(1) {
+	background-image: url(https://images.unsplash.com/photo-1561501878-aabd62634533?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80);
+}
+.slideshow li:nth-child(2) {
+	background-image: url(https://images.unsplash.com/photo-1560920452-da0369e98fe7?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=634&q=80);
+	animation-delay: 10s;
+}
+.slideshow li:nth-child(3) {
+	background-image: url(https://images.unsplash.com/photo-1444201983204-c43cbd584d93?ixlib=rb-1.2.1&auto=format&fit=crop&w=1050&q=80);
+	animation-delay: 20s;
+}
+.slideshow li:nth-child(4) {
+	background-image: url(https://images.unsplash.com/photo-1560920452-473c72e878de?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=925&q=80);
+	animation-delay: 30s;
+}
+.slideshow li:nth-child(5) {
+	background-image: url(https://ihg.scene7.com/is/image/ihg/holiday-inn-amritsar-2533273746-4x3);
+	animation-delay: 40s;
+}
+@keyframes imageAnimation {
+	0% {
+		opacity: 0;
+		animation-timing-function: ease-in;
+	}
+	10% {
+		opacity: 0.9;
+		animation-timing-function: ease-out;
+	}
+	20% {
+		opacity: 0.9;
+	}
+	30% {
+		opacity: 0;
+	}
+}
+/* Older browser support - .no-cssanimations class added by modernizr */
+.no-cssanimations .slideshow li {
+	opacity: 1;
+}
