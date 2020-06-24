@@ -4,26 +4,35 @@
 		<div class="col-md-3">
 			<p class="lead">Be$t_De@l</p>
 			<div class="list-group">
-				<li class="list-group-item active">Normal Room</li>
-				<li class="list-group-item">Deluxe Room</li>
-				<li class="list-group-item">Super Deluxe Room</li>
+				<li class="list-group-item active" id="list1" onclick="
+				document.getElementById('list1').classList.toggle('active');
+				document.getElementById('list2').classList.toggle('active');
+				document.getElementById('price1').classList.toggle('show');
+				document.getElementById('price2').classList.toggle('show');
+				document.getElementById('image1').classList.toggle('show');
+				document.getElementById('image2').classList.toggle('show');
+				">Normal Room</li>
+				<li class="list-group-item" id="list2" onclick="
+				document.getElementById('list1').classList.toggle('active');
+				document.getElementById('list2').classList.toggle('active');
+				document.getElementById('price1').classList.toggle('show');
+				document.getElementById('price2').classList.toggle('show');
+				document.getElementById('image1').classList.toggle('show');
+				document.getElementById('image2').classList.toggle('show');
+				">Deluxe Room</li>
 			</div>		
 		</div>
 		<div class="col-md-9">
 			<div class="thumbnail">
-				<div class="image show">
+				<div class="image show" id="image1">
 					<img class="img-responsive  " src="<%= campground.rooms.normalRoom.picture %>">
 				</div>
-				<div class="image">
+				<div class="image" id="image2">
 					<img class="img-responsive  " src="<%= campground.rooms.deluxeRoom.picture %>">
 				</div>
-				<div class="image">
-					<img class="img-responsive  " src="<%= campground.rooms.superDeluxRoom.picture %>">
-				</div>
 				<div class="caption-full">
-					<h4 class="pull-right price show">$<%= campground.rooms.normalRoom.price%>/night</h4>
-					<h4 class="pull-right price">$<%= campground.rooms.deluxeRoom.price%>/night</h4>
-					<h4 class="pull-right price">$<%= campground.rooms.superDeluxRoom.price%>/night</h4>
+					<h4 class="pull-right price show" id="price1">$<%= campground.rooms.normalRoom.price%>/night</h4>
+					<h4 class="pull-right price" id="price2">$<%= campground.rooms.deluxeRoom.price%>/night</h4>
 					<h4><a><%=campground.name %></a></h4>
 					<p><%= campground.description %></p>
 					<p>
@@ -72,6 +81,7 @@
 		</div>
 	</div>
 </div>
+
 
 <footer class="container-fluid text-center">
 
@@ -201,5 +211,5 @@
   }
 </style>
 
-
+<%- include('../partials/hello') -%>
 <%- include('../partials/footer')-%> 
