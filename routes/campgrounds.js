@@ -22,8 +22,6 @@ router.post("/campgrounds", middleware.isLoggedIn, function (req, res) {
   var desc = req.body.description;
   var deluxRoomPrice = req.body.deluxRoomPrice;
   var deluxRoomPicture = req.body.deluxRoomPicture;
-  var superDeluxRoomPrice = req.body.superDeluxRoomPrice;
-  var superDeluxRoomPicture = req.body.superDeluxRoomPicture;
   var city = req.body.city;
   var image = req.body.hotelPicture;
   var author = {
@@ -38,14 +36,9 @@ router.post("/campgrounds", middleware.isLoggedIn, function (req, res) {
     picture: deluxRoomPicture,
     price: deluxRoomPrice,
   };
-  var superDeluxRoom = {
-    picture: superDeluxRoomPicture,
-    price: superDeluxRoomPrice,
-  };
   var rooms = {
     normalRoom: normalRoom,
     deluxeRoom: deluxRoom,
-    superDeluxRoom: superDeluxRoom,
   };
   var newCampground = {
     name: name,
