@@ -2,28 +2,108 @@
 
 <div class = "container">
 	<div class="row">
-		<h1 style="text-align:center;">Edit <%= campground.name %></h1>
+		<h1 style="text-align:center;" id="register-head">Edit <%= campground.name %></h1>
 	<div style="width:30%; margin: 25px auto">
-		<form action="/campgrounds/<%= campground._id %>?_method=PUT" method = "POST">
-		<div class="form-group">
-			<input class="form-control" type = "text" name= "campground[name]" value="<%=campground.name%>">
-		</div>
-		<div class="form-group">
-			<input class="form-control" type = "number" name= "campground[price]" value = "<%= campground.price %>" min="0.01" step="0.01">
-		</div>
-		<div class="form-group">
-			<input class="form-control" type = "text" name = "campground[image]"           value="<%=campground.image%>">
-		</div>
-		<div class="form-group">
-		    <input class="form-control" type = "text" name = "campground[description]" value="<%=campground.description %>">
-		</div>
-		<div class="form-group">	
-			<button class="btn btn-lg btn-primary btn-block">Submit</button>
-		</div> 
-		</form>
-		<a href="/campgrounds">Go Back</a>
+		<form action="/campgrounds/<%= campground._id %>?_method=PUT" method = "POST"  id="register-form">
+			<div class="form-group">
+				<label for="name">Hotel Name</label>
+				<input
+				  class="form-control"
+				  type="text"
+				  name="name"
+				  placeholder="Hotel Name"
+				  value="<%=campground.name%>"
+				/>
+			  </div>
+	  
+			  <!-- New -->
+			  <div class="form-group">
+				<label for="city">City</label>
+				<input
+				  class="form-control"
+				  type="text"
+				  name="city"
+				  placeholder="City"
+				  value="<%=campground.city%>"
+				/>
+			  </div>
+			  <div class="form-group">
+				<label for="normalRoomPicture">Normal Room Picture</label>
+				<input
+				  type="text"
+				  class="form-control"
+				  name="normalRoomPicture"
+				  placeholder="Image Url"
+				  value="<%=campground.rooms.normalRoom.picture%>"
+				/>
+			  </div>
+			  <div class="form-group">
+				<label for="normalRoomPrice">Normal Room Price</label>
+				<input
+				  class="form-control"
+				  type="number"
+				  name="normalRoomPrice"
+				  placeholder="price"
+				  min="500"
+				  step="500"
+				  value="<%=campground.rooms.normalRoom.price%>"
+				/>
+			  </div>
+			  <div class="form-group">
+				<label for="deluxRoomPicture">Delux Room Picture</label>
+				<input
+				  type="text"
+				  class="form-control"
+				  name="deluxRoomPicture"
+				  placeholder="Image Url"
+				  value="<%=campground.rooms.deluxeRoom.picture%>"
+				/>
+			  </div>
+			  <div class="form-group">
+				<label for="deluxRoomPrice">Delux Room Price</label>
+				<input
+				  class="form-control"
+				  type="number"
+				  name="deluxRoomPrice"
+				  placeholder="price"
+				  min="500"
+				  step="500"
+				  value="<%=campground.rooms.deluxeRoom.price%>"
+				/>
+			  </div>
+			  <div class="form-group">
+				<label for="description">Hotel Description</label>
+				<input
+				  class="form-control"
+				  type="text"
+				  name="description"
+				  placeholder="Hotel Description"
+				  value="<%=campground.description%>"
+				/>
+			  </div>
+			  <div class="form-group">
+				<label for="hotelPicture">Hotel Picture</label>
+				<input
+				  type="text"
+				  class="form-control"
+				  name="hotelPicture"
+				  placeholder="Image Url"
+				  value="<%=campground.image%>"
+				/>
+			  </div>
+			  <div class="form-group">
+				<button class="btn btn-lg btn-primary btn-block">Submit</button>
+			  </div>
+			  <a href="/campgrounds">Go Back</a>
+			</form>
 	</div>
-
 	</div>
+	<ul class="slideshow">
+		<li></li>
+		<li></li>
+		<li></li>
+		<li></li>
+		<li></li>
+	</ul>
 </div>
 <%- include ('../partials/footer') -%>
